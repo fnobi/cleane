@@ -4,11 +4,12 @@
     "~/.emacs.d/lib"
 ) load-path))
 
+(package-initialize)
 
 ;; definitions
-(load "init-shell")
 (load "init-defaults")
-
+(load "init-shell")
+(load "init-auto-complete")
 
 ;; load libraries
 (load "eshell-clean-and-open")
