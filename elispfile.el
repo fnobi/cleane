@@ -19,3 +19,4 @@
 (package-install 'helm)
 (package-install 'auto-complete)
 (package-install 'ac-js2)
+(package-install 'dsvn)
