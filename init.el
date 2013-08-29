@@ -12,6 +12,7 @@
 
 ;; packages config
 (package-initialize)
+(load "init-css-mode")
 (load "init-js2-mode")
 (load "init-auto-complete")
 (load "init-emmet-mode")
