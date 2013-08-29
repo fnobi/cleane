@@ -20,6 +20,7 @@
 
 ;; load libraries
 (load "eshell-clean-and-open")
+(load "my-make-scratch")
 
 
 ;; set keybinds
