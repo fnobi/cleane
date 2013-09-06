@@ -10,3 +10,4 @@
 ;; library keybinds
 (define-key global-map (kbd "C-x g") 'magit-status)
 (define-key global-map (kbd "C-x j") 'eshell-clean-and-open)
+(define-key global-map (kbd "C-x a") 'anything)

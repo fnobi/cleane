@@ -16,7 +16,7 @@
 (load "init-js2-mode")
 (load "init-auto-complete")
 (load "init-emmet-mode")
-
+(load "init-anything")
 
 ;; load libraries
 (load "eshell-clean-and-open")
