@@ -13,7 +13,7 @@ cleaneは、fnobiが使っている.emacs.dです。
 ```
 cd /your/project/path
 git clone https://github.com/fnobi/cleane.git
-ln -s /your/project/path ~/.emacs.d
+ln -s /your/project/path/cleane ~/.emacs.d
 ```
 
 ## 依存パッケージのインストール
@@ -24,4 +24,4 @@ M-x load-file RET elispfile.el
 
 ## 依存パッケージのリスト
 
-- ```/elispfile.el``` を見るとだいたい分かる気がします。
+- [elispfile.el](https://github.com/fnobi/cleane/blob/master/elispfile.el) を見るとだいたい分かる気がします。
