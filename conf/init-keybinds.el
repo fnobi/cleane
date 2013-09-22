@@ -13,3 +13,4 @@
 (define-key global-map (kbd "C-x g") 'magit-status)
 (define-key global-map (kbd "C-x j") 'eshell-clean-and-open)
 (define-key global-map (kbd "C-x ;") 'anything)
+(define-key global-map (kbd "C-c C-l") 'toggle-truncate-lines)
