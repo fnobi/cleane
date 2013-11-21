@@ -21,3 +21,4 @@
 (package-install 'ac-js2)
 (package-install 'dsvn)
 (package-install 'anything)
+(package-install 'yasnippet)
