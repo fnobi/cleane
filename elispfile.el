@@ -22,3 +22,4 @@
 (package-install 'dsvn)
 (package-install 'anything)
 (package-install 'yasnippet)
+(package-install 'go-mode)
