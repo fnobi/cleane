@@ -19,6 +19,7 @@
 (load "init-emmet-mode")
 (load "init-anything")
 (load "init-ac-js2")
+(load "init-go-mode")
 
 ;; load libraries
 (load "eshell-clean-and-open")
