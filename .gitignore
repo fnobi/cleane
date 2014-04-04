@@ -3,3 +3,5 @@ elpa
 eshell/history
 ac-comphist.dat
 backups
+shellenv.el
+url
