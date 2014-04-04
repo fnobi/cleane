@@ -24,6 +24,7 @@
 ;; load libraries
 (load "eshell-clean-and-open")
 (load "my-make-scratch")
+(load "sudden-death")
 
 ;; set keybinds
 (load "init-keybinds")
