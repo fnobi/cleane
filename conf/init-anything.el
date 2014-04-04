@@ -6,7 +6,8 @@
   '((name . "Projects dir")
     (candidates . (lambda () (directory-files "~/Projects/")))
     (type . file)
-    (action . (lambda (entry) (dired (concat "~/Projects/" entry))))))
+    (display-to-real . (lambda (name) (concat "~/Projects/" name)))
+    (action . (lambda (entry) (dired entry)))))
 
 (defun my-anything-find-file ()
   "My anything."
