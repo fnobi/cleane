@@ -20,6 +20,7 @@
 (load "init-anything")
 (load "init-ac-js2")
 (load "init-go-mode")
+(load "init-yasnippet")
 
 ;; load libraries
 (load "eshell-clean-and-open")
