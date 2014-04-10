@@ -27,6 +27,7 @@
 (load "my-make-scratch")
 (load "sudden-death")
 (load "ggl")
+(load "anything-git-project")
 
 ;; set keybinds
 (load "init-keybinds")

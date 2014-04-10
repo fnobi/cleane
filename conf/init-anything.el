@@ -1,5 +1,4 @@
 (require 'anything-config)
-(add-to-list 'anything-sources 'anything-c-source-emacs-commands)
 
 ;; anything custom
 (defvar anything-c-source-projects-dir
