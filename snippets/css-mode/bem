@@ -1,0 +1,8 @@
+# -*- mode: snippet; -*-
+# name: bem
+# key: bem
+# --
+@include bem-element($1, ($2)) {
+
+}
+$0

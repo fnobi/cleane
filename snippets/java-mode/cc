@@ -1,0 +1,6 @@
+# -*- mode: snippet; -*-
+# name: cc
+# key: cc
+# --
+case $1: return R.drawable.pricon_frame_$1;
+$0
