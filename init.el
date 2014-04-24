@@ -28,6 +28,10 @@
 (load "sudden-death")
 (load "ggl")
 (load "anything-git-project")
+(load "notification")
 
 ;; set keybinds
 (load "init-keybinds")
+
+;; activate notification server
+(require 'notification)
