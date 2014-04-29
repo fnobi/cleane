@@ -15,3 +15,5 @@
 (define-key global-map (kbd "C-x C-f") 'anything-git-project)
 (define-key global-map (kbd "C-x ;") 'my-anything-find-file)
 (define-key global-map (kbd "C-c C-l") 'toggle-truncate-lines)
+(define-key global-map (kbd "C-x f") 'find-file)
+(define-key global-map (kbd "C-x p") 'clip-buffer)

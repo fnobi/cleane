@@ -29,6 +29,7 @@
 (load "ggl")
 (load "anything-git-project")
 (load "notification")
+(load "clip-buffer")
 
 ;; set keybinds
 (load "init-keybinds")
