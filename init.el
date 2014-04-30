@@ -21,6 +21,7 @@
 (load "init-ac-js2")
 (load "init-go-mode")
 (load "init-yasnippet")
+(load "init-magit")
 
 ;; load libraries
 (load "eshell-clean-and-open")
