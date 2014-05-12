@@ -17,4 +17,5 @@
 (define-key global-map (kbd "C-x j") 'eshell-clean-and-open)
 (define-key global-map (kbd "C-x C-f") 'anything-git-project)
 (define-key global-map (kbd "C-x ;") 'my-anything-find-file)
+(define-key global-map (kbd "C-x a a") 'my-anything-open-app)
 (define-key global-map (kbd "C-x p") 'clip-buffer)
