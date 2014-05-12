@@ -10,7 +10,8 @@
 
 (defvar anything-c-source-applications-dir
   '((name . "Projects dir")
-    (candidates . (lambda () (directory-files "/Applications/")))
+    (candidates . (lambda ()
+                    (directory-files "/Applications/" nil "\.app$")))
     (type . file)
     (display-to-real . (lambda (name) (concat "/Applications/" name)))
     (action . (lambda (entry) (shell-command (concat "open '" entry "'"))))))
