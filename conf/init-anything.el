@@ -11,10 +11,9 @@
 (defvar anything-c-source-applications-dir
   '((name . "Projects dir")
     (candidates . (lambda ()
-                    (directory-files "/Applications/" nil "\.app$")))
+                    (split-string (shell-command-to-string "mdfind kMDItemKind==\"アプリケーション\"") "\n")))
     (type . file)
-    (display-to-real . (lambda (name) (concat "/Applications/" name)))
-    (action . (lambda (entry) (shell-command (concat "open '" entry "'"))))))
+    (action . (lambda (entry) (shell-command (format "open '%s'" entry))))))
 
 (defun my-anything-find-file ()
   "My anything."
