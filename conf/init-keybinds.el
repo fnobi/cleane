@@ -11,6 +11,7 @@
 (define-key global-map (kbd "C-x :") 'goto-line)
 (define-key global-map (kbd "C-x f") 'find-file)
 (define-key global-map (kbd "M-o") 'browse-url)
+(define-key global-map (kbd "M-s") 'write-rough)
 
 ;; library keybinds
 (define-key global-map (kbd "C-x g") 'magit-status)
