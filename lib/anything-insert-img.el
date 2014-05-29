@@ -12,9 +12,12 @@
     (candidates . images)
     (type . file)
     (action . (lambda (entry)
-                (if (eq major-mode "css-mode")
-                    (insert (format format-css-img entry))
-                  (insert (format format-img-tag entry)))))))
+                (cond 
+                 ((eq major-mode 'css-mode)
+                    (insert (format format-css-img entry)))
+                 ((eq major-mode 'html-mode)
+                  (insert (format format-img-tag entry)))
+                 (t (insert entry)))))))
 
 (defun anything-insert-img ()
   (interactive)
