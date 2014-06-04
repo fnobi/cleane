@@ -22,6 +22,7 @@
 (load "init-go-mode")
 (load "init-yasnippet")
 (load "init-magit")
+(load "init-dsvn")
 
 ;; load libraries
 (load "eshell-clean-and-open")
