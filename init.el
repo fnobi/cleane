@@ -20,6 +20,7 @@
 (load "init-anything")
 (load "init-ac-js2")
 (load "init-go-mode")
+(load "init-swift-mode")
 (load "init-yasnippet")
 (load "init-magit")
 (load "init-dsvn")
@@ -39,4 +40,4 @@
 (load "init-keybinds")
 
 ;; activate notification server
-(require 'notification)
+;; (require 'notification)
