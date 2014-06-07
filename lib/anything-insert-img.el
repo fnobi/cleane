@@ -1,8 +1,18 @@
+(defun image-dir (pwd)
+  (setq path-img (format "%s/img" pwd))
+  (setq path-images (format "%s/images" pwd))
+  (cond
+   ((not pwd) nil)
+   ((file-exists-p path-img) path-img)
+   ((file-exists-p path-images) path-images)
+   (t (image-dir (file-name-directory (directory-file-name pwd))))))
+
 (defun current-project-images ()
   (setq pwd (shell-command-to-string "echo -n `pwd`"))
-  (setq root (shell-command-to-string "git rev-parse --show-cdup"))
-  (setq root (replace-regexp-in-string "\n$" "" root))
-  (split-string (shell-command-to-string (format "ls %simg" root))))
+  (setq target (image-dir pwd))
+  (if target
+      (split-string (shell-command-to-string (format "ls %s" target)))
+    nil))
 
 (defun anything-c-sources-current-project-img ()
   (setq format-img-tag "<img src=\"<%%= img_path %%>/img/%s\" alt=\"\"/>")

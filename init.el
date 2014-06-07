@@ -32,6 +32,7 @@
 (load "ggl")
 (load "anything-git-project")
 (load "anything-find-working-file")
+(load "anything-insert-img")
 (load "anything-open-app")
 (load "notification")
 (load "clip-buffer")
