@@ -34,11 +34,9 @@
 (load "anything-find-working-file")
 (load "anything-insert-img")
 (load "anything-open-app")
-(load "notification")
+(load "anything-open-app")
 (load "clip-buffer")
+(load "create-scss-component")
 
 ;; set keybinds
 (load "init-keybinds")
-
-;; activate notification server
-;; (require 'notification)
