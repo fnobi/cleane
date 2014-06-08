@@ -21,3 +21,4 @@
 (define-key global-map (kbd "C-x a a") 'anything-open-app)
 (define-key global-map (kbd "C-x M-i") 'anything-insert-img)
 (define-key global-map (kbd "C-x p") 'clip-buffer)
+(define-key global-map (kbd "M-g") 'grunt)

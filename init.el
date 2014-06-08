@@ -37,6 +37,7 @@
 (load "anything-open-app")
 (load "clip-buffer")
 (load "create-scss-component")
+(load "grunt")
 
 ;; set keybinds
 (load "init-keybinds")
