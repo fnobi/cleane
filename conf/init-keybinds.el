@@ -9,14 +9,13 @@
 
 (define-key global-map (kbd "C-c C-l") 'toggle-truncate-lines)
 (define-key global-map (kbd "C-x :") 'goto-line)
-(define-key global-map (kbd "C-x f") 'find-file)
 (define-key global-map (kbd "M-o") 'browse-url)
 (define-key global-map (kbd "M-s") 'write-rough)
 
 ;; library keybinds
 (define-key global-map (kbd "C-x g") 'magit-status)
 (define-key global-map (kbd "C-x j") 'eshell-clean-and-open)
-(define-key global-map (kbd "C-x C-f") 'anything-git-project)
+(define-key global-map (kbd "C-x f") 'anything-git-project)
 (define-key global-map (kbd "C-x ;") 'anything-find-working-file)
 (define-key global-map (kbd "C-x a a") 'anything-open-app)
 (define-key global-map (kbd "C-x M-i") 'anything-insert-img)
