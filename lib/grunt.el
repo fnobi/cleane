@@ -1,7 +1,7 @@
 (defun grunt (task-name)
   (interactive "sTask Name: ")
 
-  (setq buffer-name (format "*grunt*: %s" task-name))
+  (setq buffer-name (format "*grunt*" task-name))
   (setq result (shell-command-to-string (format "grunt %s" task-name)))
 
   (generate-new-buffer buffer-name)
