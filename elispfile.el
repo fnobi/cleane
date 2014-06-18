@@ -24,3 +24,4 @@
 (package-install 'yasnippet)
 (package-install 'go-mode)
 (package-install 'swift-mode)
+(package-install 'csharp-mode)
