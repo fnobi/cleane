@@ -1,5 +1,7 @@
 ;; 新しいeshell bufferを、1キーバインドで開くための設定
 
+(defvar eshell-max-shells-count 20)
+
 ;; 次に開くべきeshell bufferの名前(string)を、intに変換
 (defun new-eshell-number ()
   (setq new-buffer-name (generate-new-buffer-name eshell-buffer-name))
@@ -23,7 +25,7 @@
   (setq proc (get-buffer-process buf))
   (when (and buf (not proc)) (kill-buffer buf))
   (setq next-num (if num (+ num 1) 2))
-  (when (< next-num (length (buffer-list))) (clean-eshell-buffers next-num)))
+  (when (< next-num eshell-max-shells-count) (clean-eshell-buffers next-num)))
 
 ;; cleanして、あたらしいeshellひらく
 (defun eshell-clean-and-open ()
