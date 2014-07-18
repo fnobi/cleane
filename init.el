@@ -38,6 +38,7 @@
 (load "clip-buffer")
 (load "create-scss-component")
 (load "grunt")
+(load "write-rough")
 
 ;; set keybinds
 (load "init-keybinds")
