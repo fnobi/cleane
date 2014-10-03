@@ -34,7 +34,7 @@
 (load "anything-find-working-file")
 (load "anything-insert-img")
 (load "anything-open-app")
-(load "anything-open-app")
+(load "anything-open-bookmark")
 (load "clip-buffer")
 (load "create-scss-component")
 (load "grunt")
