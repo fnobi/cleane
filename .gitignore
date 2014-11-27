@@ -5,3 +5,4 @@ ac-comphist.dat
 backups
 conf/init-shellenv.el
 url
+/tramp
