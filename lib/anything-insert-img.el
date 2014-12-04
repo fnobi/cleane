@@ -2,11 +2,13 @@
   (setq path-img (format "%s/img" pwd))
   (setq path-images (format "%s/images" pwd))
   (setq path-static (format "%s/static/img" pwd))
+  (setq path-public (format "%s/public/img" pwd))
   (cond
    ((not pwd) nil)
    ((file-exists-p path-img) path-img)
    ((file-exists-p path-images) path-images)
    ((file-exists-p path-static) path-static)
+   ((file-exists-p path-public) path-public)
    (t (image-dir (file-name-directory (directory-file-name pwd))))))
 
 (defun current-project-images ()
@@ -27,6 +29,7 @@
 (defun anything-c-sources-current-project-img ()
   (setq format-img-tag "<img src=\"<%%= img_path %%>/%s\" width=\"%s\" height=\"%s\" alt=\"\"/>")
   (setq format-css-img "background-image: image-url('%s');\nwidth: %spx;\nheight: %spx;")
+  (setq format-js-img "var IMAGE_PATH = '%s';\nvar IMAGE_WIDTH = %s;\nvar IMAGE_HEIGHT = %s;")
   (setq images (current-project-images))
   '((name . "img")
     (candidates . images)
@@ -38,6 +41,8 @@
                 (cond 
                  ((eq major-mode 'css-mode)
                     (insert (format format-css-img entry width height)))
+                 ((eq major-mode 'js2-mode)
+                    (insert (format format-js-img entry width height)))
                  ((eq major-mode 'html-mode)
                   (insert (format format-img-tag entry width height)))
                  (t (insert entry)))))))
