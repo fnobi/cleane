@@ -26,7 +26,7 @@
 
 (defun anything-c-sources-current-project-img ()
   (setq format-img-tag "<img src=\"<%%= img_path %%>/%s\" width=\"%s\" height=\"%s\" alt=\"\"/>")
-  (setq format-css-img "image-url('%s');\nwidth: %spx;\nheight: %spx;")
+  (setq format-css-img "background-image: image-url('%s');\nwidth: %spx;\nheight: %spx;")
   (setq images (current-project-images))
   '((name . "img")
     (candidates . images)
