@@ -13,6 +13,7 @@
 (package-initialize)
 
 ;; packages config
+(load "init-cc-mode")
 (load "init-css-mode")
 (load "init-js2-mode")
 (load "init-auto-complete")
