@@ -1,0 +1,6 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: tothis
+# key: tothis
+# --
+this.$1 = opts.$1 || $2;
+$0

@@ -1,0 +1,8 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: iblock
+# key: iblock
+# --
+width: $width;
+height: $height;
+@include background-size($width $height);
+$0
