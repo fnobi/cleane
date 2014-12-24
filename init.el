@@ -40,6 +40,8 @@
 (load "create-scss-component")
 (load "grunt")
 (load "write-rough")
+(load "ant")
+(load "ndk-build")
 
 ;; set keybinds
 (load "init-keybinds")
