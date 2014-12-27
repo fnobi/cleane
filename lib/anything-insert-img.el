@@ -28,7 +28,7 @@
 
 (defun anything-c-sources-current-project-img ()
   (setq format-img-tag "<img src=\"<%%= img_path %%>/%s\" width=\"%s\" height=\"%s\" alt=\"\"/>")
-  (setq format-css-img "width: %spx;\nheight: %spx;\nbackground-image: image-url('%s');")
+  (setq format-css-img "background-image: image-url('%s');\nwidth: %spx;\nheight: %spx;")
   (setq format-js-img "var IMAGE_PATH = '%s';\nvar IMAGE_WIDTH = %s;\nvar IMAGE_HEIGHT = %s;")
   (setq images (current-project-images))
   '((name . "img")
