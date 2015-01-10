@@ -42,6 +42,7 @@
 (load "write-rough")
 (load "ant")
 (load "ndk-build")
+(load "sweep-buffer")
 
 ;; set keybinds
 (load "init-keybinds")
