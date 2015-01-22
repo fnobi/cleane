@@ -1,0 +1,6 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: wfs
+# key: wfs
+# --
+<a name="$1"></a>
+### $1 : $0

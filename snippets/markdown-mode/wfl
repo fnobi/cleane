@@ -1,0 +1,5 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: wfl
+# key: wfl
+# --
+(=>[$1](#$1))
