@@ -3,12 +3,14 @@
   (funcall iterator (car bufs))
   (if (cdr bufs) (each-buffer iterator (cdr bufs))))
 
-(defun sweep-buffer ()
+(defun sweep-buffer (&optional verbose)
   (interactive)
-  (setq verbose nil)
-  (setq result-buffer-name (generate-new-buffer-name "*sweep-buffer*"))
-  (generate-new-buffer result-buffer-name)
-  (switch-to-buffer result-buffer-name)
+  (setq count 0)
+  (if verbose
+      (let () 
+        (setq result-buffer-name (generate-new-buffer-name "*sweep-buffer*"))
+        (generate-new-buffer result-buffer-name)
+        (switch-to-buffer result-buffer-name)))
   (each-buffer '(lambda (buf)
                   (setq name (buffer-name buf))
                   (setq file-name (buffer-file-name buf))
@@ -16,5 +18,8 @@
                   (setq flag (or (string= mode "dired-mode") file-name))
                   (if flag
                       (let ()
-                        (insert (concat "[clear]\t" name "\n"))
-                        (if flag (kill-buffer buf)))))))
+                        (setq count (+ count 1))
+                        (if verbose
+                            (insert (concat "[clear]\t" name "\n")))
+                        (if flag (kill-buffer buf))))))
+  (message (format "kill %d buffers" count)))
