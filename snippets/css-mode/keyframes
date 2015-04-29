@@ -1,0 +1,12 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: keyframes
+# key: keyframes
+# --
+@include keyframes($1) {
+    0% {
+        $0
+    }
+    100% {
+        
+    }
+}

@@ -1,6 +1,7 @@
 # -*- mode: snippet; require-final-newline: nil -*-
-# name: instance
-# key: @
+# name: on
+# key: on
 # --
-var instance = this;
-$0
+on('$1', function (e) {
+    $0
+});

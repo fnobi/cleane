@@ -1,6 +1,0 @@
-# -*- mode: snippet -*-
-# name: border-radius
-# key: bdr
-# --
-@include border-radius($1);
-$0

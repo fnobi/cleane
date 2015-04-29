@@ -1,7 +1,7 @@
 # -*- mode: snippet -*-
 # name: method
-# key: .()
+# key: method
 # --
-$1.prototype.$2 = function () {
-  $0
+`(file-name-sans-extension (file-name-nondirectory (buffer-file-name)))`.prototype.$1 = function () {
+    $0
 };

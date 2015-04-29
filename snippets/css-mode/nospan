@@ -1,0 +1,7 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: nospan
+# key: nospan
+# --
+span {
+    display: none;
+}$0

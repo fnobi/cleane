@@ -1,0 +1,9 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: animation
+# key: animation
+# --
+@include animation-name($1);
+@include animation-duration($2);
+@include animation-iteration-count(${3:infinite});
+@include animation-timing-function(${4:linear});
+$0

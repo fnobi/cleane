@@ -1,6 +1,6 @@
 # -*- mode: snippet; require-final-newline: nil -*-
-# name: instance
-# key: @
+# name: extend
+# key: *
 # --
-var instance = this;
+@extend $1;
 $0
