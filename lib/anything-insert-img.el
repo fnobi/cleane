@@ -27,9 +27,9 @@
   (split-string res "x"))
 
 (defun anything-c-sources-current-project-img ()
-  (setq format-img-tag "<img src=\"<%%= img_path %%>/%s\" width=\"%s\" height=\"%s\" alt=\"\"/>")
-  (setq format-css-img "background-image: image-url('%s');\nwidth: %spx;\nheight: %spx;")
-  (setq format-js-img "var IMAGE_PATH = '%s';\nvar IMAGE_WIDTH = %s;\nvar IMAGE_HEIGHT = %s;")
+  (setq format-img-tag "<img width=\"%s\" height=\"%s\" src=\"<%%= img_path %%>/%s\" alt=\"\"/>")
+  (setq format-css-img "width: %spx;\nheight: %spx;\nbackground-image: url(\"#{$img_path}/%s\");")
+  (setq format-js-img "var IMAGE_WIDTH = %s;\nvar IMAGE_HEIGHT = %s;\nvar IMAGE_PATH = '%s';")
   (setq images (current-project-images))
   '((name . "img")
     (candidates . images)
@@ -40,11 +40,11 @@
                 (setq height (nth 1 dimen))
                 (cond 
                  ((eq major-mode 'css-mode)
-                    (insert (format format-css-img entry width height)))
+                    (insert (format format-css-img width height entry)))
                  ((eq major-mode 'js2-mode)
-                    (insert (format format-js-img entry width height)))
+                    (insert (format format-js-img width height entry)))
                  ((eq major-mode 'html-mode)
-                  (insert (format format-img-tag entry width height)))
+                  (insert (format format-img-tag width height entry)))
                  (t (insert entry)))))))
 
 (defun anything-insert-img ()
