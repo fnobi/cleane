@@ -1,10 +1,12 @@
 (defun image-dir (pwd)
+  (interactive "DRoot Dir: ")
   (setq path-img (format "%s/img" pwd))
   (setq path-images (format "%s/images" pwd))
   (setq path-static (format "%s/static/img" pwd))
   (setq path-public (format "%s/public/img" pwd))
   (cond
    ((not pwd) nil)
+   ((string= pwd "/") nil)
    ((file-exists-p path-img) path-img)
    ((file-exists-p path-images) path-images)
    ((file-exists-p path-static) path-static)
