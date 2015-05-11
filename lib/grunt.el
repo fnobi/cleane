@@ -24,19 +24,15 @@
   (interactive "sTask Name: ")
 
   (cond
-   ((gruntfile-path pwd) ((lambda () 
-                        (setq buffer-name (format "*grunt*" task-name))
-                        (setq result (shell-command-to-string (format "grunt %s" task-name)))
-
-                        (generate-new-buffer buffer-name)
-                        (switch-to-buffer buffer-name)
-                        (insert (ansi-color-apply result)))))
-   ((gulpfile-path pwd) ((lambda () 
-                        (setq buffer-name (format "*gulp*" task-name))
-                        (setq result (shell-command-to-string (format "gulp %s" task-name)))
-
-                        (generate-new-buffer buffer-name)
-                        (switch-to-buffer buffer-name)
-                        (insert (ansi-color-apply result)))))
+   ((gruntfile-path default-directory) ((lambda () 
+                                          (with-current-buffer (buffer-name (eshell-clean-and-open))
+                                            (eshell-return-to-prompt)
+                                            (insert (format "grunt %s" task-name))
+                                            (eshell-send-input)))))
+   ((gulpfile-path default-directory) ((lambda () 
+                                          (with-current-buffer (buffer-name (eshell-clean-and-open))
+                                            (eshell-return-to-prompt)
+                                            (insert (format "gulp %s" task-name))
+                                            (eshell-send-input)))))
    (t (message (format "config file not found. %s" (pwd))))))
 
