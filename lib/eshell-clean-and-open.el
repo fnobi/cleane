@@ -33,6 +33,13 @@
   (clean-eshell-buffers nil)
   (eshell (new-eshell-number)))
 
+;; eshellを開いて、その上でコマンド実行
+(defun eshell-command-on-shell (command)
+  (with-current-buffer (buffer-name (eshell-clean-and-open))
+    (eshell-return-to-prompt)
+    (insert command)
+    (eshell-send-input)))
+
 ;; 一回eshellを起動しないと、eshell-buffer-nameなどが入らないみたいなので、
 ;; 起動してすぐ閉じる
 (eshell)

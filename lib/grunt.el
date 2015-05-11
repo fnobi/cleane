@@ -22,17 +22,8 @@
 
 (defun grunt (task-name)
   (interactive "sTask Name: ")
-
   (cond
-   ((gruntfile-path default-directory) ((lambda () 
-                                          (with-current-buffer (buffer-name (eshell-clean-and-open))
-                                            (eshell-return-to-prompt)
-                                            (insert (format "grunt %s" task-name))
-                                            (eshell-send-input)))))
-   ((gulpfile-path default-directory) ((lambda () 
-                                          (with-current-buffer (buffer-name (eshell-clean-and-open))
-                                            (eshell-return-to-prompt)
-                                            (insert (format "gulp %s" task-name))
-                                            (eshell-send-input)))))
+   ((gruntfile-path default-directory) (eshell-command-on-shell (format "grunt %s" task-name)))
+   ((gulpfile-path default-directory) (eshell-command-on-shell (format "gulp %s" task-name)))
    (t (message (format "config file not found. %s" (pwd))))))
 
