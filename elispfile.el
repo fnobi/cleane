@@ -25,3 +25,4 @@
 (package-install 'go-mode)
 (package-install 'swift-mode)
 (package-install 'jade-mode)
+(package-install 'slim-mode)
