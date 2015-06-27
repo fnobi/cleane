@@ -35,6 +35,7 @@
 
 ;; eshellを開いて、その上でコマンド実行
 (defun eshell-command-on-shell (command)
+  (interactive "sCommand: ")
   (with-current-buffer (buffer-name (eshell-clean-and-open))
     (eshell-return-to-prompt)
     (insert command)

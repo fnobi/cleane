@@ -23,3 +23,4 @@
 (define-key global-map (kbd "C-x p") 'clip-buffer)
 (define-key global-map (kbd "M-g") 'grunt)
 (define-key global-map (kbd "M-n") 'ndk-build)
+(define-key global-map (kbd "M-!") 'eshell-command-on-shell)
