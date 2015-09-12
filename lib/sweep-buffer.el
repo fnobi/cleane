@@ -15,7 +15,12 @@
                   (setq name (buffer-name buf))
                   (setq file-name (buffer-file-name buf))
                   (setq mode (format "%s" (buffer-local-value 'major-mode buf)))
-                  (setq flag (or (string= mode "dired-mode") file-name))
+                  (setq flag (or
+                              file-name
+                              (string= mode "dired-mode")
+                              (string= mode "magit-diff-mode")
+                              (string= mode "magit-rev-mode")
+                              (string= mode "magit-process-mode")))
                   (if flag
                       (let ()
                         (setq count (+ count 1))
