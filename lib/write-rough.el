@@ -1,5 +1,5 @@
 (defun rough-file-name (index)
-  (setq dir (expand-file-name "~/Desktop"))
+  (setq dir (expand-file-name "~/Documents/rough"))
   (setq today (shell-command-to-string "echo -n $(date +%y%m%d)"))
   (setq filename (if (> index 0) 
                    (format "%s/%s_rough-%d.md" dir today index)
