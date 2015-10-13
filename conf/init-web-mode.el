@@ -19,5 +19,6 @@
   (setq web-mode-java-offset   0)
   (setq web-mode-asp-offset    0)
   (setq indent-tabs-mode t)
-  (setq tab-width 0))
+  (setq tab-width 0)
+  (sgml-electric-tag-pair-mode t))
 (add-hook 'web-mode-hook 'web-mode-hook)
