@@ -25,6 +25,7 @@
 (load "init-yasnippet")
 (load "init-magit")
 (load "init-dsvn")
+(load "init-web-mode")
 
 ;; load libraries
 (load "eshell-clean-and-open")

@@ -26,3 +26,4 @@
 (package-install 'swift-mode)
 (package-install 'jade-mode)
 (package-install 'slim-mode)
+(package-install 'web-mode)
