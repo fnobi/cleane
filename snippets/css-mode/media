@@ -1,0 +1,7 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: media
+# key: media
+# --
+@media (max-width: $sp_max_width) {
+  $0
+}
