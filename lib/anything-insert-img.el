@@ -30,6 +30,7 @@
 
 (defun anything-c-sources-current-project-img ()
   (setq format-img-tag "<img width=\"%s\" height=\"%s\" src=\"<%%= img_path %%>/%s\" alt=\"\"/>")
+  (setq format-css-img "width: %spx;\nheight: %spx;\nbackground-image: image-url(\"%s\");")
   (setq format-css-img "width: %spx;\nheight: %spx;\nbackground-image: url(\"#{$img_path}/%s\");")
   (setq format-js-img "var IMAGE_WIDTH = %s;\nvar IMAGE_HEIGHT = %s;\nvar IMAGE_PATH = '%s';")
   (setq images (current-project-images))
@@ -46,6 +47,8 @@
                  ((eq major-mode 'js2-mode)
                     (insert (format format-js-img width height entry)))
                  ((eq major-mode 'html-mode)
+                  (insert (format format-img-tag width height entry)))
+                 ((eq major-mode 'web-mode)
                   (insert (format format-img-tag width height entry)))
                  (t (insert entry)))))))
 
