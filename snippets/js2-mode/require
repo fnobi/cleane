@@ -2,5 +2,4 @@
 # name: require
 # key: require
 # --
-var $1 = require('$1');
-$0
+var $1 = require('$1');$0

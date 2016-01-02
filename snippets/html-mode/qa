@@ -1,0 +1,8 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: qa
+# key: qa
+# --
+}, {
+  :question => '$1',
+  :answer   => '$2'
+$0

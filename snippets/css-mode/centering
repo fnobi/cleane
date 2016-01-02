@@ -1,0 +1,12 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: centering
+# key: centering
+# --
+position: absolute;
+width: $width;
+height: $height;
+left: 50%;
+top: 50%;
+margin-left: (-$width / 2);
+margin-top: (-$height / 2);
+$0

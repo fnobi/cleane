@@ -1,0 +1,6 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: require
+# key: require
+# --
+$1 = require '$1'
+$0

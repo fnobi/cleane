@@ -1,0 +1,8 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: sound
+# key: sss
+# --
+$1: {
+    src: [{ path: '/s3/sound/$1.mp3' }]
+},
+$0

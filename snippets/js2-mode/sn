@@ -1,0 +1,10 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: sn
+# key: sn
+# --
+se_$1: {
+    src: [{
+        media: 'audio/mp3',
+        path: '/s3/sound/se_$1.mp3'
+    }]
+},$0
