@@ -34,6 +34,7 @@
   (setq format-img-tag "<img width=\"%s\" height=\"%s\" src=\"<%%= img_path %%>/%s\" alt=\"\"/>")
   (setq format-css-img "width: %spx;\nheight: %spx;\nbackground-image: image-url(\"%s\");")
   (setq format-js-img "var IMAGE_WIDTH = %s;\nvar IMAGE_HEIGHT = %s;\nvar IMAGE_PATH = '%s';")
+  (setq format-slim-img "img[width=\"%s\" height=\"%s\" src=\"%s\" alt=\"\"]")
   (setq images (current-project-images))
   '((name . "img")
     (candidates . images)
@@ -44,6 +45,8 @@
                 (setq height (nth 1 dimen))
                 (setq img (substring entry 2 nil))
                 (cond 
+                 ((eq major-mode 'slim-mode)
+                    (insert (format format-slim-img width height img)))
                  ((eq major-mode 'css-mode)
                     (insert (format format-css-img width height img)))
                  ((eq major-mode 'js2-mode)
