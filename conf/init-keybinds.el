@@ -23,5 +23,6 @@
 (define-key global-map (kbd "C-x M-b") 'anything-open-bookmark)
 (define-key global-map (kbd "C-x p") 'clip-buffer)
 (define-key global-map (kbd "M-g") 'grunt)
+(define-key global-map (kbd "C-x M-n") 'npm)
 (define-key global-map (kbd "M-n") 'ndk-build)
 (define-key global-map (kbd "M-!") 'eshell-command-on-shell)

@@ -20,10 +20,20 @@
    ((file-exists-p gulp-coffee) gulp-coffee)
    (t (gulpfile-path (file-name-directory (directory-file-name pwd))))))
 
+(defun packagefile-path (pwd)
+  (interactive "DRoot Dir: ")
+  (setq package-json (format "%s/package.json" pwd))
+  (cond
+   ((not pwd) nil)
+   ((string= pwd "/") nil)
+   ((file-exists-p package-json) package-json)
+   (t (packagefile-path (file-name-directory (directory-file-name pwd))))))
+
 (defun grunt (task-name)
   (interactive "sTask Name: ")
   (cond
    ((gruntfile-path default-directory) (eshell-command-on-shell (format "grunt %s" task-name)))
-   ((gulpfile-path default-directory) (eshell-command-on-shell (format "gulp %s" task-name)))
+   ;; ((gulpfile-path default-directory) (eshell-command-on-shell (format "gulp %s" task-name)))
+   ((packagefile-path default-directory) (eshell-command-on-shell (format "npm run %s" task-name)))
    (t (message (format "config file not found. %s" (pwd))))))
 
