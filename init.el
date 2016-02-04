@@ -26,6 +26,7 @@
 (load "init-magit")
 (load "init-dsvn")
 (load "init-web-mode")
+(load "init-dired-open")
 
 ;; load libraries
 (load "eshell-clean-and-open")
