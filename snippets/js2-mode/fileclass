@@ -2,7 +2,11 @@
 # name: fileclass
 # key: C
 # --
-var `(file-name-sans-extension (file-name-nondirectory (buffer-file-name)))` = function (opts) {
-    opts = opts || {};
-    $0
+import EventEmitter from 'events';
+
+export default class `(file-name-sans-extension (file-name-nondirectory (buffer-file-name)))` extends EventEmitter {
+    constructor (opts = {}) {
+        super();
+        $0
+    }
 };
