@@ -6,3 +6,4 @@ backups
 conf/init-shellenv.el
 url
 /tramp
+/eshell
