@@ -28,3 +28,4 @@
 (package-install 'slim-mode)
 (package-install 'web-mode)
 (package-install 'dired-open)
+(package-install 'sass-mode)
