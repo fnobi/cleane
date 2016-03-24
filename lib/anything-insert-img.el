@@ -37,6 +37,7 @@
   (setq format-css-img "width: %spx;\nheight: %spx;\nbackground-image: image-url(\"%s\");")
   (setq format-js-img "const IMAGE_WIDTH = %s;\nconst IMAGE_HEIGHT = %s;\nconst IMAGE_PATH = '%s';")
   (setq format-slim-img "img[width=\"%s\" height=\"%s\" src=\"%s\" alt=\"\"]")
+  (setq format-jade-img "img(width=\"%s\" height=\"%s\" src=\"%s\" alt=\"\")")
   (setq format-md-img "![img](%s)")
   (setq format-detail "image path\t%s\nentry:\t%s\nabsolute:\t%s\nrelative:\t%s\nbasename:\t%s\nwidth:\t%s\nheight:\t%s")
   (setq images (current-project-images))
@@ -54,6 +55,8 @@
                 (cond 
                  ((eq major-mode 'slim-mode)
                     (insert (format format-slim-img width height basename)))
+                 ((eq major-mode 'jade-mode)
+                    (insert (format format-jade-img width height basename)))
                  ((eq major-mode 'css-mode)
                     (insert (format format-css-img width height basename)))
                  ((eq major-mode 'js2-mode)
