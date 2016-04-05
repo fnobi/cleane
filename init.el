@@ -27,6 +27,7 @@
 (load "init-dsvn")
 (load "init-web-mode")
 (load "init-dired-open")
+(load "init-cocoa")
 
 ;; load libraries
 (load "eshell-clean-and-open")
