@@ -47,6 +47,7 @@
 (load "ant")
 (load "ndk-build")
 (load "sweep-buffer")
+(load "call-terminal")
 
 ;; set keybinds
 (load "init-keybinds")
