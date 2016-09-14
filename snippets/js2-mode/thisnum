@@ -1,6 +1,6 @@
 # -*- mode: snippet; require-final-newline: nil -*-
-# name: tothisnum
-# key: tothisnum
+# name: thisnum
+# key: thisnum
 # --
 this.$1 = isNaN(opts.$1) ? $2 : opts.$1;
 $0

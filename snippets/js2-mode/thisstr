@@ -1,6 +1,6 @@
 # -*- mode: snippet; require-final-newline: nil -*-
-# name: tovar
-# key: tovar
+# name: thisstr
+# key: thisstr
 # --
-var $1 = this.$1;
+this.$1 = opts.$1 || $2;
 $0

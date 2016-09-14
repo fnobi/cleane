@@ -2,5 +2,5 @@
 # name: import
 # key: import
 # --
-import $1 from "$1";
+import $1 from '$1';
 $0

@@ -1,6 +1,6 @@
 # -*- mode: snippet; require-final-newline: nil -*-
-# name: tothis
-# key: tothis
+# name: tocons
+# key: tocons
 # --
-this.$1 = opts.$1 || $2;
+const $1 = this.$1;
 $0
