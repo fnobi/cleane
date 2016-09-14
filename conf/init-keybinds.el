@@ -16,6 +16,7 @@
 ;; library keybinds
 (define-key global-map (kbd "C-x g") 'magit-status)
 (define-key global-map (kbd "C-x j") 'call-terminal)
+(define-key global-map (kbd "C-x M-j") 'call-finder)
 (define-key global-map (kbd "C-x f") 'anything-git-project)
 (define-key global-map (kbd "C-x ;") 'anything-find-working-file)
 (define-key global-map (kbd "C-x a a") 'anything-open-app)
