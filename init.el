@@ -49,6 +49,7 @@
 (load "ndk-build")
 (load "sweep-buffer")
 (load "call-terminal")
+(load "call-finder")
 
 ;; set keybinds
 (load "init-keybinds")
