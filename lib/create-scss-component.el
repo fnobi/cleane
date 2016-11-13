@@ -12,6 +12,6 @@
    ((not (file-exists-p sass-components-dir)) (message (format "There is no %s dir." components-dir-name)))
    (t ((lambda ()
         (write-region content nil sass-file-path)
-        (insert (format "@import \"%s/%s\";" components-dir-name name))
+        (insert (format "@import '%s/%s';" components-dir-name name))
         (save-buffer)
         (find-file sass-file-path))))))

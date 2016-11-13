@@ -34,7 +34,7 @@
 
 (defun anything-c-sources-current-project-img ()
   (setq format-img-tag "<img width=\"%s\" height=\"%s\" src=\"<%%= img_path %%>/%s\" alt=\"\"/>")
-  (setq format-css-img "width: %spx;\nheight: %spx;\nbackground-image: image-url(\"%s\");")
+  (setq format-css-img "width: %spx;\nheight: %spx;\nbackground-image: image-url('%s');")
   (setq format-js-img "const IMAGE_WIDTH = %s;\nconst IMAGE_HEIGHT = %s;\nconst IMAGE_PATH = '%s';")
   (setq format-slim-img "img[width=\"%s\" height=\"%s\" src=\"%s\" alt=\"\"]")
   (setq format-jade-img "img(width=\"%s\" height=\"%s\" src=\"%s\" alt=\"\")")
