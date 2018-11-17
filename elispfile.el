@@ -29,4 +29,4 @@
 (package-install 'web-mode)
 (package-install 'dired-open)
 (package-install 'sass-mode)
-(package-install 'csharp-mode)
+(package-install 'typescript-mode)
